@@ -66,10 +66,10 @@ export function createConnectedWallet({
         terraAddress: terraAddress as HumanAddr,
         walletAddress: terraAddress as HumanAddr,
         design,
-        post: (tx: CreateTxOptions) => {
+        post: (tx: ExtensionOptions) => {
           return post(tx, terraAddress);
         },
-        sign: (tx: CreateTxOptions) => {
+        sign: (tx: ExtensionOptions) => {
           return sign(tx, terraAddress);
         },
         signBytes: (bytes: Buffer) => {
